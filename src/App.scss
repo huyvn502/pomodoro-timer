@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;600;700&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #181818;
+    font-family: 'Dosis', sans-serif;
+    color: #F6F6F6;
+    padding-bottom: 10vh;
+}
+
+#pomodoro-container {
+    width: 50%;
+    margin: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    #title-header {
+        text-align: center;
+        width: 100%;
+    }
+    .timer-box {
+        width: 250px; 
+        background-color: #262626;
+        padding: 2% 3%;
+        margin: 1%;
+        border-radius: 15px;
+        border: 1px solid rgba(246,246,246, 0.1);
+        h4 {
+            font-weight: 500;
+            margin: 0;
+        }
+        hr {
+            opacity: 0.1;
+        }
+        h1, p{
+            text-align: center;
+        }
+        h1 {
+            margin: 3%;
+        }
+        p {
+            margin-top: -2%;
+        }
+        .timer-controller {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: baseline;
+            justify-content: center;
+            .display-time {
+                display: inline;
+                width: 50%;
+            }
+        }
+        button {
+            background-color: #262626;
+            color: rgba(246,246,246, 0.8);
+            border: 1px solid rgba(246,246,246, 0.5);
+            padding: 3% 4%;
+            border-radius: 8px;
+            margin: 0 1%;
+        }
+        button:hover {
+            cursor: pointer;
+            border: 1px solid rgba(246,246,246, 1);
+            background-color: rgba(24,24,24, 1);
+            transition: background-color 0.8s ease 0.2s, border 0.8s ease 0.2s;
+        }
+        button:active {
+            opacity: 0.5;
+        }
+    }
+    #session-box {
+        width: 520px;
+        #timer-label {
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 0;
+        }
+        h1 {
+            font-size: 5rem;
+        }
+        .time-left-controller {
+            text-align: center;
+            button {
+                width: 30%;
+                font-size: 1.25rem;
+            }
+            margin-bottom: 5%;
+        }
+    }
+}
+@media screen and (max-width: 1070px) {
+    #pomodoro-container {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 350px) {
+    body {
+        min-width: 350px;
+        overflow: scroll;
+    }
+}
